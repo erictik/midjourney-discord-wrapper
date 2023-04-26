@@ -1,4 +1,4 @@
-# midjourney-discord
+# midjourney-discord-wrapper
 use  midjourney-discord 
 node.js client for MidJourney wrapper in Discord.
 <div align="center">
