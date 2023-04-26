@@ -1,5 +1,5 @@
 {
-  "name": "midjourney-discord",
+  "name": "midjourney-discord-wrapper",
   "version": "1.0.0",
   "description": "use midjourney-discord",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ohdat/midjourney-discord.git"
+    "url": "git+https://github.com/ohdat/midjourney-discord-wrapper.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ohdat/midjourney-discord/issues"
+    "url": "https://github.com/ohdat/midjourney-discord-wrapper/issues"
   },
-  "homepage": "https://github.com/ohdat/midjourney-discord#readme",
+  "homepage": "https://github.com/ohdat/midjourney-discord-wrapper#readme",
   "devDependencies": {
     "dotenv": "^16.0.3",
     "typescript": "^5.0.4"
