@@ -4,7 +4,9 @@ env:
   DOCKER_TAG: 1.1.${{ github.run_number }}
   APP_NAME: ${{ github.event.repository.name }}
   DOCKERHUB_USERNAME: erictik
- 
+  TAG: ${{ github.env.DOCKERHUB_USERNAME }}/${{ github.env.APP_NAME }}:${{ github.env.DOCKER_TAG }}
+  REPO: ${{ github.env.DOCKERHUB_USERNAME }}/${{ github.env.APP_NAME }}
+  LATEST_TAG: ${{ github.env.DOCKERHUB_USERNAME }}/${{ github.env.APP_NAME }}:latest
 on:
   workflow_dispatch:
   push:
@@ -15,10 +17,6 @@ on:
 
 jobs:
   buildAndPush:
-    env:
-      TAG: ${{ github.env.DOCKERHUB_USERNAME }}/${{ github.env.APP_NAME }}:${{ github.env.DOCKER_TAG }}
-      REPO: ${{ github.env.DOCKERHUB_USERNAME }}/${{ github.env.APP_NAME }}
-      LATEST_TAG: ${{ github.env.DOCKERHUB_USERNAME }}/${{ github.env.APP_NAME }}:latest
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
