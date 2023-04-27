@@ -3,10 +3,8 @@ name: dev
 env:
   DOCKER_TAG: 1.1.${{ github.run_number }}
   APP_NAME: ${{ github.event.repository.name }}
-  TAG: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:1.1.${{ github.run_number }}
-  REPO: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}
-  LATEST_TAG: ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest
-
+  DOCKERHUB_USERNAME: erictik
+ 
 on:
   workflow_dispatch:
   push:
@@ -17,6 +15,10 @@ on:
 
 jobs:
   buildAndPush:
+    env:
+      TAG: ${{ github.env.DOCKERHUB_USERNAME }}/${{ github.env.APP_NAME }}:${{ github.env.DOCKER_TAG }}
+      REPO: ${{ github.env.DOCKERHUB_USERNAME }}/${{ github.env.APP_NAME }}
+      LATEST_TAG: ${{ github.env.DOCKERHUB_USERNAME }}/${{ github.env.APP_NAME }}:latest
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -27,7 +29,7 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v2
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        username: ${{ github.env.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build Docker image
       uses: docker/build-push-action@v2
