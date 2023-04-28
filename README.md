@@ -23,26 +23,41 @@ Variations
 Reply  `v1` `v2` `v3` `v4`
 ![variation](image/variation.gif)
 ## Usage
+[How to get your Discord SALAI_TOKEN:](https://www.androidauthority.com/get-discord-token-3149920/)  
+[How to create a Discord bot and add it to your server:](https://www.xda-developers.com/how-to-create-discord-bot/)
+### Docker
+``` bash
+docker run -d  --env-file .env erictik/midjourney-discord-wrapper
+```
+
+### Node.js
 To run the included example, you must have [Node.js](https://nodejs.org/en) installed. Then, run the following commands in the root directory of this project:
 1. clone the repository
 ```
-git clone
+git clone hthttps://github.com/erictik/midjourney-discord-wrapper.git
+cd midjourney-discord-wrapper
 ```
 2. install dependencies
-```
+```bash
 yarn 
-#or 
+```
+or
+```bash
 npm install
 ```
 3. build
-```
+```bash
 yarn build
-#ro
+```
+#
+``` bash
 npm run build
 ```
 4. run the example
-```
+```bash
 yarn start
-#or
+```
+or
+```bash
 npm run start
 ```
