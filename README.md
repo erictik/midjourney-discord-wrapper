@@ -10,7 +10,7 @@ node.js client for MidJourney wrapper in Discord.
 [web ui example](https://github.com/erictik/midjourney-ui/)
 
 ## Implemented commands documentation
-[Join discord experience](https://discord.gg/dP95gZ8z)
+[Join discord experience](https://discord.gg/TNnFp8MJ)
 Generating idea
 ```
 /oh_imagine [ MT : prompt (string)]
