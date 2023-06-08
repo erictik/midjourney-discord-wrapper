@@ -19,9 +19,9 @@ Generating idea
 /oh_imagine [ MT : prompt (string)]
 ```
 ![prompt_pwz2u1](image/prompt.gif)
-#### upscaling   
-Reply `u1` `u2` `u3` `u4` 
-![upscale](image/upscale.gif)
+#### upscaling     
+Reply `u1` `u2` `u3` `u4`   
+![upscale](image/upscale.gif)  
 #### variations  
 Reply  `v1` `v2` `v3` `v4`
 ![variation](image/variation.gif)
